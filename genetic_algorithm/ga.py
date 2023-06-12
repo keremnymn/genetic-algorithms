@@ -1,15 +1,6 @@
 import random, torch
 import torch.nn as nn
 
-input_data = torch.tensor(
-    [[0, 0, 1], [1, 1, 1], [1, 0, 1], [0, 1, 1]],
-    dtype=torch.float32
-)
-target = torch.tensor(
-    [[0, 1, 1, 0]],
-    dtype=torch.float32
-).T
-
 # Define the neural network architecture
 class NeuralNetwork(nn.Module):
     def __init__(self):
@@ -125,6 +116,16 @@ class GeneticAlgorithm:
         return self.agents[0]
 
 if __name__ == "__main__":
+    input_data = torch.tensor(
+        [[0, 0, 1], [1, 1, 1], [1, 0, 1], [0, 1, 1]],
+        dtype=torch.float32
+    )
+    target = torch.tensor(
+        [[0, 1, 1, 0]],
+        dtype=torch.float32
+    ).T
+
+
     ga = GeneticAlgorithm(
         pop_size=100,
         generations=50,

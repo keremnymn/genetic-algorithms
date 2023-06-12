@@ -1,1 +1,1 @@
-You don't need to install `torch` if you have it already. Check input and target data and run `ga.py`.
+This is a PyTorch studies repo that I am building while I learn about various NN algorithms.
